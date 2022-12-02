@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line PowerShell script
       run: |
-        if (!(Test-Path "./test.txt")) { New-Item -ItemType File -Name "./text.txt" }
+        if (!(Test-Path "./test.txt")) { New-Item -ItemType File -Name "./test.txt" }
         Add-Content "./test.txt" "asd qwe"
         git config --global user.name "Glorp"
         git config --global user.email "glorp@users.noreply.github.com"
