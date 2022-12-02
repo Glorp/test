@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Run PowerShell Hello World script
       if: github.event.action == 'inline'
       run: Write-Output 'Hello World!'
@@ -17,3 +17,4 @@ jobs:
       run: |
         $psversiontable;
         Get-Process;
+        git status;
