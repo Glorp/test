@@ -13,6 +13,8 @@ jobs:
       run: Write-Output 'Hello World!'
     - name: Run a multi-line PowerShell script
       run: |
-        $psversiontable;
-        Get-Process;
-        git status;
+        if (!(Test-Path "./test.txt")) { New-Item -ItemType File -Name "./text.txt" }
+        Add-Content "./test.txt" "asd qwe"
+        git add -A
+        git commit
+        git push
